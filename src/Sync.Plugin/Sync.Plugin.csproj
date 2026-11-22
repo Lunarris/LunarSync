@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Dalamud.NET.Sdk/15.0.0">
+  <PropertyGroup>
+    <Version>0.4.0.0</Version>
+    <AssemblyName>LunarSync</AssemblyName>
+    <RootNamespace>Sync.Plugin</RootNamespace>
+    <Author>Lunarris</Author>
+    <Name>Lunar Sync</Name>
+    <Punchline>Private mod sync for a small friend group.</Punchline>
+    <Description>Connects to your group's Lunar Sync server and manages pairs. Development build: syncs mods, Glamourer, Customize+, Simple Heels, Honorific, Moodles, Pet Nicknames and Loci between pairs.</Description>
+    <Tags>sync;social</Tags>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <AssemblyAttribute Include="System.Reflection.AssemblyMetadataAttribute">
+      <_Parameter1>BuildTime</_Parameter1>
+      <_Parameter2>$([System.DateTime]::Now.ToString("MM-dd HH:mm"))</_Parameter2>
+    </AssemblyAttribute>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Sync.Client.Core\Sync.Client.Core.csproj" />
+    <PackageReference Include="Penumbra.Api" Version="5.15.1" />
+    <PackageReference Include="Glamourer.Api" Version="2.8.0" />
+    <PackageReference Include="Loci.Api" Version="0.1.0" />
+  </ItemGroup>
+</Project>
